@@ -1,7 +1,8 @@
 //
 // Created by lilly on 3/21/2025.
 //
-
+//#pragma once
+//#include "image.h"
 #include "image_processing.h"
 
 // Clamping Function
@@ -30,8 +31,24 @@ void multiply_func(const string& path1, const string& path2, const string& outpu
         return;
     }
 
-    for (int i = 0; i < (image1.header.width * image1.header.height); i++) {
+    for (int i = 0; i < image1.header.getImageSize(); i++) {
         image1.pixels[i] = multiply_pixel(image1.pixels[i],image2.pixels[i]);
+    }
+    image1.write(outputPath);
+}
+
+void subtract_fun(const string& path1, const string& path2, const string& outputPath) {
+    Image image1, image2;
+    image1.read(path1);
+    image2.read(path2);
+    if (image1.header.getImageSize() != image2.header.getImageSize()) {
+        cout << "Error: Image size mismatch!" << endl;
+        return;
+    }
+    for (int i = 0; i < (image1.header.width * image1.header.height); i++) {
+        image1.pixels[i].blue = clamp(image1.pixels[i].blue - image2.pixels[i].blue);
+        image1.pixels[i].green = clamp(image1.pixels[i].green - image2.pixels[i].green);
+        image1.pixels[i].red = clamp(image1.pixels[i].red - image2.pixels[i].red);
     }
     image1.write(outputPath);
 }
@@ -52,4 +69,3 @@ void modify_color_channel(const string& input, const string& output, int channel
     }
     image.write(output);
 }
-
