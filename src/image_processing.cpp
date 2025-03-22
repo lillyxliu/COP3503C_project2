@@ -36,4 +36,20 @@ void multiply_func(const string& path1, const string& path2, const string& outpu
     image1.write(outputPath);
 }
 
+void modify_color_channel(const string& input, const string& output, int channel, int mod) {
+    Image image;
+    image.read(input);
+    unsigned char c = 0;
+    for (int i = 0; i < image.header.getImageSize(); i++) {
+        if (channel == 1) c = image.pixels[i].blue;
+        else if (channel == 2) c = image.pixels[i].green;
+        else if (channel == 3) c = image.pixels[i].red;
+
+        int temp_channel = static_cast<int>(c); // source: geeks for geeks
+        temp_channel = temp_channel+mod;
+        temp_channel = clamp(temp_channel);
+        c =  static_cast<unsigned char>(temp_channel); // source: geeks for geeks
+    }
+    image.write(output);
+}
 

@@ -21,4 +21,6 @@ Pixel multiply_pixel( Pixel &p1,  Pixel &p2);
 void multiply_func(const string& path1, const string& path2, const string& outputPath);
 
 
+void modify_color_channel(const string& input, const string& output, int channel, int mod);
+
 #endif //IMAGE_PROCESSING_H
