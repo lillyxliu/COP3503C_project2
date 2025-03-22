@@ -1,0 +1,14 @@
+# ninja log v6
+9	773	7641424532076171	CMakeFiles/project2.dir/main.cpp.obj	fa8a64933a20968a
+713	884	7643088167861969	project2.exe	599a1e2abfc912b2
+53	861	7643040629941034	build.ninja	a1d0a58449b37d45
+5	712	7643088160793555	CMakeFiles/project2.dir/src/main.cpp.obj	a6fb1ff1a0fe51c5
+8	779	7643088441932835	CMakeFiles/project2.dir/src/main.cpp.obj	a6fb1ff1a0fe51c5
+780	936	7643088449662181	project2.exe	599a1e2abfc912b2
+4	764	7643091745455110	CMakeFiles/project2.dir/src/main.cpp.obj	a6fb1ff1a0fe51c5
+765	927	7643091753061296	project2.exe	599a1e2abfc912b2
+4	691	7643092196797101	CMakeFiles/project2.dir/src/main.cpp.obj	a6fb1ff1a0fe51c5
+697	853	7643092203735438	project2.exe	599a1e2abfc912b2
+5	759	7643097672775556	CMakeFiles/project2.dir/src/main.cpp.obj	a6fb1ff1a0fe51c5
+4	696	7643098623090964	CMakeFiles/project2.dir/src/main.cpp.obj	a6fb1ff1a0fe51c5
+696	857	7643098630015483	project2.exe	599a1e2abfc912b2
